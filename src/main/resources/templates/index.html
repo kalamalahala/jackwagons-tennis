@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1 th:text="${title}">This title will be replaced</h1>
+<p> Here comes a Vue component!</p>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<div id="app">{{ message }}</div>
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const message = ref('Hello vue!')
+            return {
+                message
+            }
+        }
+    }).mount('#app')
+</script>
+
+</body>
+</html>
